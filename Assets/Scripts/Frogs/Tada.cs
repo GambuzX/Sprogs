@@ -6,5 +6,5 @@ using UnityEngine;
 [RequireComponent(typeof(ShooterBehaviour))]
 public class Tada : Sprog
 {
-    
+
 }

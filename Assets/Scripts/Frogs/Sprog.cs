@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Health))]
 public abstract class Sprog : Fighter
 {
+    public Health health;
+
     public override string HorizontalAxisName() {
         return "SprogHorizontal";
     }
