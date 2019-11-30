@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Health))]
 abstract public class Fighter : MonoBehaviour
 {
     public abstract string HorizontalAxisName();
@@ -9,4 +10,5 @@ abstract public class Fighter : MonoBehaviour
     public abstract string JumpButtonName();
     public abstract string FireButtonName();
     public abstract string DashButtonName();
+    public abstract string HealthBarName();
 }

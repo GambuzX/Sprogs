@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Health))]
 public abstract class Sprog : Fighter
 {
-    public Health health;
-
     public override string HorizontalAxisName() {
         return "SprogHorizontal";
     }
@@ -21,5 +18,8 @@ public abstract class Sprog : Fighter
     }
     public override string DashButtonName() {
         return "SprogDash";
+    }
+    public override string HealthBarName() {
+        return "SprogHealthBar";
     }
 }
