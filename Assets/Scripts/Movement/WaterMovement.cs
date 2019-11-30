@@ -1,14 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Fighter))]
 
-public class GroundMovement : MonoBehaviour
+public class WaterMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 200f;
-    [SerializeField] float jumpForce = 6f;
+    [SerializeField] float jumpForce = 20f;
     private bool grounded;
 
     private bool lastMoveRight;
@@ -47,11 +47,11 @@ public class GroundMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) {
         switch(collision.transform.tag) {
             case "Ground":
-                grounded = true;
+                print("dead");
                 break;
 
             case "Water":
-                print("dead");
+                grounded = true;
                 break;
         }
     }
