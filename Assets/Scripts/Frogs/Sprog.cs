@@ -19,4 +19,7 @@ public abstract class Sprog : Fighter
     public override string FireButtonName() {
         return "SprogFire";
     }
+    public override string DashButtonName() {
+        return "SprogDash";
+    }
 }

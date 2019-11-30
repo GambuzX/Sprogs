@@ -4,11 +4,11 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Fighter))]
-
+[RequireComponent(typeof(DashBehaviour))]
 public class WaterMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 200f;
-    [SerializeField] float jumpForce = 20f;
+    [SerializeField] float jumpForce = 10f;
     private bool grounded;
 
     private bool lastMoveRight;

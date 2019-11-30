@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 178917760}
   - component: {fileID: 178917759}
   - component: {fileID: 178917758}
+  - component: {fileID: 178917763}
   - component: {fileID: 178917762}
   m_Layer: 0
   m_Name: WaterFrog
@@ -314,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4983199370b81aa4c8cd3f18d1d3cd3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 1984433232}
 --- !u!114 &178917759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,6 +385,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &178917763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178917756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c794a965bcfa8a4ab7bd1688696ba14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashEffect: {fileID: 40330922135080820, guid: 7c95aa2d3fe886a429974190a00f19c7,
+    type: 3}
 --- !u!1 &355927352
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +521,7 @@ Transform:
   - {fileID: 1987011107}
   - {fileID: 1984433231}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &395752742
 GameObject:

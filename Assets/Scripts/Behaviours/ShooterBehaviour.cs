@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Fighter))]
-
 public class ShooterBehaviour : MonoBehaviour
 {
     [SerializeField] float fireRate = 1f;

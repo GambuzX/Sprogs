@@ -19,4 +19,7 @@ public abstract class Frolien : Fighter
     public override string FireButtonName() {
         return "FrolienFire";
     }
+    public override string DashButtonName() {
+        return "FrolienDash";
+    }
 }
