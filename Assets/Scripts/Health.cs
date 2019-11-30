@@ -6,19 +6,18 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Fighter))]
 public class Health : MonoBehaviour
 {
-    public Image healthBar;
-    private float maxHealth;
+    private const float MAX_HEALTH = 100f;
     private float health;
 
     private Fighter frog;
+    private Image healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
         frog = GetComponent<Fighter>();
-        healthBar = GameObject.Find(frog.HealthBarName()).GetComponent<Image>();
-        maxHealth = 0.5f;
-        health = 0.5f;
+        healthBar = GameObject.Find(frog.HealthBarName()).transform.Find("HealthBar").GetComponent<Image>();
+        health = 100f;
         UpdateHealthBar();
     }
 
@@ -27,12 +26,12 @@ public class Health : MonoBehaviour
         return health;
     }
 
-    public void UpdateHealth(float hp)
+    private void UpdateHealth(float hp)
     {
         health += hp;
-        if(health > maxHealth)
+        if(health > MAX_HEALTH)
         {
-            health = maxHealth;
+            health = MAX_HEALTH;
         }
 
         UpdateHealthBar();
@@ -40,6 +39,17 @@ public class Health : MonoBehaviour
 
     private void UpdateHealthBar()
     {
-        healthBar.fillAmount = health;
+        healthBar.fillAmount = health*0.5f/MAX_HEALTH;
+    }
+
+    void OnTriggerEnter2D(Collider2D collider) {
+        Projectile projectileComp = collider.GetComponent<Projectile>();
+        if (projectileComp != null) {
+            if (projectileComp.getOrigin() != GetComponent<Fighter>().GetType().ToString()) {
+                // enemy projectile
+                UpdateHealth(-projectileComp.getDamage());
+                projectileComp.SelfDestruct();
+            }
+        }
     }
 }
