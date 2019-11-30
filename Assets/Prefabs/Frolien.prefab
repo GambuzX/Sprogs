@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3389800176402349760}
   - component: {fileID: 3389800176402349763}
   - component: {fileID: 3389800176402349761}
+  - component: {fileID: 1488302487}
   m_Layer: 0
   m_Name: Frolien
   m_TagString: Untagged
@@ -133,8 +134,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 200
-  fireRate: 1
   jumpForce: 6
   jumpCooldown: 1
+--- !u!114 &1488302487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3389800176402349772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3365f01449e804bb44d56b22d4cb96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 1
   projectilePrefab: {fileID: 7051407308986761649, guid: a1407fa1a1711e9489fef5c654510560,
     type: 3}

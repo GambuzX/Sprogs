@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Frolien : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D))]
+public class GroundMovement : MonoBehaviour
 {
 
     [SerializeField] float moveSpeed = 200f;
-    [SerializeField] float fireRate = 1f;
     [SerializeField] float jumpForce = 6f;
     [SerializeField] float jumpCooldown = 1f;
-
-    public GameObject projectilePrefab;
-    private bool shootLock;
-    private bool attackLock;
     private bool grounded;
 
     private bool lastMoveRight;
@@ -24,16 +20,6 @@ public class Frolien : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         grounded = true;
-        shootLock = false;
-        attackLock = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (!shootLock && Input.GetButton("FrolienFire")) {
-            SpawnProjectile();
-        }
     }
 
     void FixedUpdate() {
@@ -48,8 +34,7 @@ public class Frolien : MonoBehaviour
             transform.eulerAngles = new Vector3(0.0f, 180, 0.0f);
         }
 
-        if (!attackLock)
-            rb.velocity = new Vector2(moveHorizontal * moveSpeed * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(moveHorizontal * moveSpeed * Time.deltaTime, rb.velocity.y);
 
         if (grounded && Input.GetButton("FrolienJump")) {
             //animator.SetTrigger("jump");
@@ -57,29 +42,6 @@ public class Frolien : MonoBehaviour
             grounded = false;
             Invoke("UnlockJump", jumpCooldown);
         }
-    }
-
-    void SpawnProjectile() {
-
-        shootLock = true;
-
-        Vector2 direction = lastMoveRight ? Vector2.right : Vector2.left;
-
-        GameObject projectile = Instantiate(projectilePrefab, this.transform.position, projectilePrefab.transform.rotation);
-        Projectile projectileComp = projectile.GetComponent<Projectile>();
-        projectileComp.setSpeed(8f);
-        projectileComp.setDirection(direction);
-        projectileComp.setOrientation(lastMoveRight);
-
-        Invoke("UnlockShoot", fireRate);
-    }
-
-    void UnlockShoot() {
-        shootLock = false;
-    }
-
-    void UnlockAttack() {
-        attackLock = false;
     }
 
     void UnlockJump() {
