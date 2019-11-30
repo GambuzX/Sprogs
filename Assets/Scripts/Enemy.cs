@@ -22,8 +22,8 @@ public class Enemy : MonoBehaviour
     }
 
     void FixedUpdate() {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxis("HorizontalEnemy");
+        float vertical = Input.GetAxis("VerticalEnemy");
 
         //print(horizontal);
         //print(vertical);
