@@ -5,14 +5,11 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     private float speed = 1f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Invoke("SelfDestruct", 8f);
-    }
+    private float damage = 10f;
     
-    void SelfDestruct() {
+    private string origin;
+    
+    public void SelfDestruct() {
         Destroy(this.gameObject);
     }
 
@@ -26,5 +23,22 @@ public class Projectile : MonoBehaviour
 
     public void setOrientation(bool right) {        
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, (right ? 0f : 180f), transform.eulerAngles.z);
+    }
+
+    public void setOrigin(string origin) {
+        this.origin = origin;
+    }
+
+    public string getOrigin() {
+        return origin;
+    }
+
+    public float getDamage() {
+        return damage;
+    }
+
+    void OnTriggerEnter2D(Collider2D collider) {
+        if (!collider.GetComponentInParent<Fighter>())
+            SelfDestruct();
     }
 }

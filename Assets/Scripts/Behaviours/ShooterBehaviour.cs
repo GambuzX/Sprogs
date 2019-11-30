@@ -41,7 +41,7 @@ public class ShooterBehaviour : MonoBehaviour
         projectileComp.setSpeed(8f);
         projectileComp.setDirection(direction);
         projectileComp.setOrientation(lastMoveRight);
-
+        projectileComp.setOrigin(frog.GetType().ToString());
         Invoke("UnlockShoot", fireRate);
     }
 
