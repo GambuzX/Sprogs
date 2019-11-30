@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Health))]
 public abstract class Frolien : Fighter
 {
-    public Health health;
-
     public override string HorizontalAxisName() {
         return "FrolienHorizontal";
     }
@@ -18,5 +15,8 @@ public abstract class Frolien : Fighter
     }
     public override string FireButtonName() {
         return "FrolienFire";
+    }
+    public override string HealthBarName() {
+        return "FrolienHealthBar";
     }
 }
