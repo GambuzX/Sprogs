@@ -6,7 +6,7 @@ InputManager:
   serializedVersion: 2
   m_Axes:
   - serializedVersion: 3
-    m_Name: Horizontal
+    m_Name: SprogHorizontal
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: a
@@ -22,7 +22,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: HorizontalEnemy
+    m_Name: FrolienHorizontal
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: left
@@ -38,7 +38,7 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
-    m_Name: Vertical
+    m_Name: SprogVertical
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: s
@@ -54,7 +54,7 @@ InputManager:
     axis: 1
     joyNum: 1
   - serializedVersion: 3
-    m_Name: VerticalEnemy
+    m_Name: FrolienVertical
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: down
@@ -118,13 +118,13 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Jump
+    m_Name: SprogJump
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: space
+    positiveButton: joystick button 1
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: space
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -132,7 +132,23 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 0
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: FrolienJump
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 1
+    altNegativeButton: 
+    altPositiveButton: enter
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 2
   - serializedVersion: 3
     m_Name: Mouse X
     descriptiveName: 
@@ -182,7 +198,7 @@ InputManager:
     axis: 2
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Horizontal
+    m_Name: SprogHorizontal
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -198,7 +214,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: HorizontalEnemy
+    m_Name: FrolienHorizontal
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -214,7 +230,7 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
-    m_Name: Vertical
+    m_Name: SprogVertical
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -230,7 +246,7 @@ InputManager:
     axis: 1
     joyNum: 1
   - serializedVersion: 3
-    m_Name: VerticalEnemy
+    m_Name: FrolienVertical
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -246,7 +262,7 @@ InputManager:
     axis: 1
     joyNum: 2
   - serializedVersion: 3
-    m_Name: EnemyFire
+    m_Name: FrolienFire
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
