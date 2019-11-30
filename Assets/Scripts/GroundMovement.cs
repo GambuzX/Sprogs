@@ -5,10 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class GroundMovement : MonoBehaviour
 {
-
     [SerializeField] float moveSpeed = 200f;
     [SerializeField] float jumpForce = 6f;
-    [SerializeField] float jumpCooldown = 1f;
     private bool grounded;
 
     private bool lastMoveRight;
@@ -40,11 +38,12 @@ public class GroundMovement : MonoBehaviour
             //animator.SetTrigger("jump");
             rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             grounded = false;
-            Invoke("UnlockJump", jumpCooldown);
         }
     }
 
-    void UnlockJump() {
-        grounded = true;
+    void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.transform.tag == "Ground") {
+            grounded = true;
+        }
     }
 }
