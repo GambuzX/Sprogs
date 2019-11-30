@@ -26,8 +26,7 @@ public class ShooterBehaviour : MonoBehaviour
     {
         if (!shootLock && Input.GetButton(frog.FireButtonName())) {
             SpawnProjectile();
-        }
-        
+        }            
     }
 
     void SpawnProjectile() {
