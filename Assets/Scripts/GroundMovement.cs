@@ -21,7 +21,7 @@ public class GroundMovement : MonoBehaviour
     }
 
     void FixedUpdate() {
-        float moveHorizontal  = Input.GetAxis("FrolienHorizontal");
+        float moveHorizontal = Input.GetAxis("FrolienHorizontal");
 
         if (moveHorizontal > 0) {
             lastMoveRight = true;
