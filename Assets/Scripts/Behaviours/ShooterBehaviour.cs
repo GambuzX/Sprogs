@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Fighter))]
+
 public class ShooterBehaviour : MonoBehaviour
 {
     [SerializeField] float fireRate = 1f;
@@ -9,16 +11,20 @@ public class ShooterBehaviour : MonoBehaviour
     public GameObject projectilePrefab;
     
     private bool shootLock;
+
+    private Fighter frog;
+
     // Start is called before the first frame update
     void Start()
     {
-        shootLock = false;        
+        shootLock = false;
+        frog = GetComponent<Fighter>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!shootLock && Input.GetButton("FrolienFire")) {
+        if (!shootLock && Input.GetButton(frog.FireButtonName())) {
             SpawnProjectile();
         }
         

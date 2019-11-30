@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Fighter))]
+
 public class GroundMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 200f;
@@ -12,16 +14,18 @@ public class GroundMovement : MonoBehaviour
     private bool lastMoveRight;
 
     private Rigidbody2D rb;
+    private Fighter frog;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        frog = GetComponent<Fighter>();
         grounded = true;
     }
 
     void FixedUpdate() {
-        float moveHorizontal = Input.GetAxis("FrolienHorizontal");
+        float moveHorizontal = Input.GetAxis(frog.HorizontalAxisName());
 
         if (moveHorizontal > 0) {
             lastMoveRight = true;
@@ -34,8 +38,7 @@ public class GroundMovement : MonoBehaviour
 
         rb.velocity = new Vector2(moveHorizontal * moveSpeed * Time.deltaTime, rb.velocity.y);
 
-        if (grounded && Input.GetButton("FrolienJump")) {
-            //animator.SetTrigger("jump");
+        if (grounded && Input.GetButton(frog.JumpButtonName())) {
             rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             grounded = false;
         }
