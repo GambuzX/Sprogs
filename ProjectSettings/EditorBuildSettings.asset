@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FrogSelection.unity
     guid: e2895e73286bb954aa413e4bcc803b51
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 32a5d41ed81682d4481efeb456e446f3
   m_configObjects: {}

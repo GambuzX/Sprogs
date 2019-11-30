@@ -47,7 +47,7 @@ public class WaterMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) {
         switch(collision.transform.tag) {
             case "Ground":
-                print("dead");
+                LevelController.GameOver(this.gameObject.GetComponent<Fighter>());
                 break;
 
             case "Water":

@@ -51,7 +51,7 @@ public class GroundMovement : MonoBehaviour
                 break;
 
             case "Water":
-                print("dead");
+                LevelController.GameOver(this.gameObject.GetComponent<Fighter>());
                 break;
         }
     }

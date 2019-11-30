@@ -35,6 +35,10 @@ public class Health : MonoBehaviour
         }
 
         UpdateHealthBar();
+
+        if (health <= 0f) {
+            LevelController.GameOver(this.gameObject.GetComponent<Fighter>());
+        }
     }
 
     private void UpdateHealthBar()
