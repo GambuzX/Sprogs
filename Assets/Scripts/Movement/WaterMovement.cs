@@ -34,7 +34,7 @@ public class WaterMovement : Movement
             grounded = false;
         }
 
-        if (grounded && Input.GetButton(frog.EnterWaterName()))
+        if (grounded && (Input.GetButton(frog.EnterWaterName()) || Input.GetAxis(frog.VerticalAxisName()) < 0))
         {
             frog.toggleComponents(false);
             animator.SetTrigger("Dive");

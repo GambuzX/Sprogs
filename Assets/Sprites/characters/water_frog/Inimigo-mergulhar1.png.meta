@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 4c88887ae95b6294098bbd08939f4a98
+guid: bede4913309598b469f2400b188b9c36
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7610299776399898351
-    second: inimigo mergulho_0
+      213: -7452338533493349179
+    second: Inimigo-mergulhar1_0
   - first:
-      213: 1833563968411696941
-    second: inimigo mergulho_1
+      213: -6867635352315053551
+    second: Inimigo-mergulhar1_1
   - first:
-      213: -3462292642306353290
-    second: inimigo mergulho_2
+      213: -4713385965831773181
+    second: Inimigo-mergulhar1_2
   - first:
-      213: 6982611039512924500
-    second: inimigo mergulho_3
+      213: -8954419452117853866
+    second: Inimigo-mergulhar1_3
+  - first:
+      213: -1964575518397052758
+    second: Inimigo-mergulhar1_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -110,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: inimigo mergulho_0
+      name: Inimigo-mergulhar1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 156
+        y: 197
         width: 100
-        height: 100
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 662f412d19d5dc04d8dee428e9d6ab9b
-      internalID: 7610299776399898351
+      spriteID: 5df209e0cb219544b8213872f6a3cde6
+      internalID: -7452338533493349179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inimigo mergulho_1
+      name: Inimigo-mergulhar1_1
       rect:
         serializedVersion: 2
         x: 100
-        y: 156
+        y: 197
         width: 100
-        height: 100
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7744addd988522b479787c37c73bab40
-      internalID: 1833563968411696941
+      spriteID: 48f1ac22ef593334d9e43e1981f002eb
+      internalID: -6867635352315053551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inimigo mergulho_2
+      name: Inimigo-mergulhar1_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 56
+        y: 138
         width: 100
-        height: 100
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2a027de865ea8f4fa71eac1a660fbd6
-      internalID: -3462292642306353290
+      spriteID: 3cdd923af91f5804e9f5576816c916e2
+      internalID: -4713385965831773181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inimigo mergulho_3
+      name: Inimigo-mergulhar1_3
       rect:
         serializedVersion: 2
         x: 100
-        y: 56
+        y: 138
         width: 100
-        height: 100
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +190,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73aa3be5318cbad41af657770e5bccca
-      internalID: 6982611039512924500
+      spriteID: 40f845c85cc95f8408deaddc3adaf61a
+      internalID: -8954419452117853866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Inimigo-mergulhar1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 100
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2dd04c31c736d4989b32be75eeb2c4
+      internalID: -1964575518397052758
       vertices: []
       indices: 
       edges: []
