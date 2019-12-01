@@ -472,9 +472,9 @@ RectTransform:
   m_Father: {fileID: 3676100}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -72, y: 377}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -72, y: -37}
   m_SizeDelta: {x: 90.33002, y: 25.399994}
   m_Pivot: {x: 0.50000006, y: 0.5000001}
 --- !u!114 &702469863
@@ -614,8 +614,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -45}
-  m_SizeDelta: {x: 140.6, y: 35.600006}
+  m_AnchoredPosition: {x: 111.2, y: -62.3}
+  m_SizeDelta: {x: 162.9, y: 61.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1726110181
 MonoBehaviour:
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -642,13 +642,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Try to get to the end \nwithout dying "
+  m_Text: Fight the froliens to get the mighty apple the rarest apple of the universe
 --- !u!222 &1726110182
 CanvasRenderer:
   m_ObjectHideFlags: 0
