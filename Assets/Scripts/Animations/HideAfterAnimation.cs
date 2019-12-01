@@ -18,9 +18,7 @@ public class HideAfterAnimation : StateMachineBehaviour
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {   
-        SpriteRenderer renderer = animator.gameObject.GetComponentInChildren<SpriteRenderer>();
-        renderer.enabled = false;
+    {
         animator.gameObject.GetComponentInChildren<Collider2D>().enabled = false;
     }
 

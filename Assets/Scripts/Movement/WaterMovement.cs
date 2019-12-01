@@ -7,10 +7,13 @@ public class WaterMovement : Movement
 
     public GameObject jumpSpot;
 
+    private bool diveLocked;
+
     // Start is called before the first frame update
     new void Start()
     {
         base.Start();
+        diveLocked = false;
         jumpSpot = GameObject.FindGameObjectWithTag("JumpSpot");
     }
 
@@ -34,11 +37,14 @@ public class WaterMovement : Movement
             grounded = false;
         }
 
-        if (grounded && (Input.GetButton(frog.EnterWaterName()) || Input.GetAxis(frog.VerticalAxisName()) == -1))
+        if (!diveLocked && grounded && (Input.GetButton(frog.EnterWaterName()) || Input.GetAxis(frog.VerticalAxisName()) == -1))
         {
             frog.toggleComponents(false);
             animator.SetTrigger("Dive");
             grounded = false;
+            diveLocked = true;
+            print("diving");
+            Invoke("UnlockDive", 2f);
             Invoke("JumpFromSpot", 2f);
         }
     }
@@ -70,5 +76,9 @@ public class WaterMovement : Movement
     {
         gameObject.GetComponentInChildren<Collider2D>().enabled = true;
         frog.toggleComponents(true);
+    }
+
+    void UnlockDive() {
+        diveLocked = false;
     }
 }
