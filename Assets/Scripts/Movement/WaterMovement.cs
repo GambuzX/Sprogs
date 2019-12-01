@@ -35,6 +35,9 @@ public class WaterMovement : Movement
         if (grounded && Input.GetButton(frog.JumpButtonName())) {
             rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             grounded = false;
+            animator.SetTrigger("Jump");
+            animator.ResetTrigger("Dive");
+            animator.SetBool("Grounded", false);
         }
 
         if (!diveLocked && grounded && (Input.GetButton(frog.EnterWaterName()) || Input.GetAxis(frog.VerticalAxisName()) == -1))
@@ -43,7 +46,6 @@ public class WaterMovement : Movement
             animator.SetTrigger("Dive");
             grounded = false;
             diveLocked = true;
-            print("diving");
             Invoke("UnlockDive", 2f);
             Invoke("JumpFromSpot", 2f);
         }
@@ -58,6 +60,7 @@ public class WaterMovement : Movement
 
             case "Water":
                 grounded = true;
+                animator.SetBool("Grounded", true);
                 break;
         }
     }
@@ -70,6 +73,7 @@ public class WaterMovement : Movement
         rb.AddForce(Vector2.up*10, ForceMode2D.Impulse);
         Invoke("ResetCollider", 0.5f);
         grounded = false;
+        animator.SetBool("Grounded", false);
     }
 
     void ResetCollider()
