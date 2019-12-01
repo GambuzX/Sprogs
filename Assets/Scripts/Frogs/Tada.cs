@@ -16,6 +16,7 @@ public class Tada : Sprog
     private void Update() {
         if (Input.GetButtonDown(base.LightAttackName())) {
             animator.SetTrigger("Punch");
+            animator.ResetTrigger("Jump");
         }
     }
 

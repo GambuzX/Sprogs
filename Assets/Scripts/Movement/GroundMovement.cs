@@ -31,6 +31,9 @@ public class GroundMovement : Movement
         if (grounded && Input.GetButton(frog.JumpButtonName())) {
             rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             grounded = false;
+            animator.SetTrigger("Jump");
+            animator.ResetTrigger("Punch");
+            animator.SetBool("Grounded", false);
         }
     }
 
@@ -38,6 +41,7 @@ public class GroundMovement : Movement
         switch(collision.transform.tag) {
             case "Ground":
                 grounded = true;
+                animator.SetBool("Grounded", true);
                 break;
 
             case "Water":
