@@ -3,116 +3,62 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class CutsceneLoader : MonoBehaviour
 {
-    public Sprite Cutscene1;
-    public Sprite Cutscene2;
 
-    public Image actual_image;
-    public Image fade_image;
+public RawImage rawImage;
+public VideoPlayer videoPlayer;
+public AudioSource audioSource;
 
-    public string sceneGame = "StoryGame";
+public Text[] texts;
+public VideoClip[] vids;
 
-    private bool canSkip;
-    private float timeSinceCanSkip;
+private int count = 0;
 
-    private int num_image;
+  // Use this for initialization
+void Start () {
 
-    //Input
-    private string skip_button_name;
+    DontDestroyOnLoad(audioSource);
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        skip_button_name = "Fire1";
-#if UNITY_WEBGL
-        skip_button_name += "_WEBGL";
-#endif
-        canSkip = false;
-        num_image = 1;
-        Invoke("Fade_Anim", 5f);
-        Invoke("ChangeImage", 6f);
-        Invoke("Fade_Comeback", 7f);
-        Invoke("Fade_Anim", 14f);
-        Invoke("ChangeImage", 15f);
-        Invoke("Fade_Comeback", 16f);
-        Invoke("Fade_Anim", 23f);
-        Invoke("LoadGame", 25f);
+    ChangeClip();
+
+    count++;
+
+    Invoke("ChangeClip",15f);
+
+    Invoke("LoadSelectedScene",30f);
+
+}
+
+void ChangeClip(){
+    videoPlayer.clip = vids[count];
+    if(count>0){
+        texts[count-1].GetComponent<Text>().enabled = false;
     }
+    texts[count].GetComponent<Text>().enabled = true;
+    StartCoroutine(PlayVideo(videoPlayer));
+}
 
-    private void Update()
+IEnumerator PlayVideo(VideoPlayer vp)
+{
+    vp.Prepare();
+    WaitForSeconds waitForSeconds = new WaitForSeconds(1);
+    while (!vp.isPrepared)
     {
-        if (canSkip && Input.GetButtonDown(skip_button_name))
-        {
-            SceneManager.LoadScene(sceneGame);
-        }
-
-        if (Input.anyKey && !canSkip)
-        {
-            canSkip = true;
-            timeSinceCanSkip = Time.time;
-        }
-
-        if(Time.time - timeSinceCanSkip >= 2f)
-        {
-            canSkip = false;
-        }
+        yield return waitForSeconds;
+        break;
     }
-
-    private void Fade_Anim()
-    {
-        StartCoroutine(FadeImage(false));
-    }
-
-    private void Fade_Comeback()
-    {
-        StartCoroutine(FadeImage(true));
-    }
-
-    private void ChangeImage()
-    {
-        if (num_image == 1)
-        {
-            actual_image.sprite = Cutscene1;
-            num_image++;
-        }
-        else if (num_image == 2)
-        {
-            actual_image.sprite = Cutscene2;
-            num_image++;
-        }
-    }
+    rawImage.texture = vp.texture;
+    vp.Play();
+    audioSource.Play();
+}
 
 
-    private void LoadGame()
-    {
-        SceneManager.LoadScene(sceneGame);
-    }
+public void LoadSelectedScene(){
+    SceneManager.LoadScene("Game");
+}
 
-    IEnumerator FadeImage(bool fadeAway)
-    {
-        // fade from opaque to transparent
-        if (fadeAway)
-        {
-            // loop over 1 second backwards
-            for (float i = 1; i >= 0; i -= Time.deltaTime)
-            {
-                // set color with i as alpha
-                fade_image.color = new Color(0, 0, 0, i);
-                yield return null;
-            }
-        }
-        // fade from transparent to opaque
-        else
-        {
-            // loop over 1 second
-            for (float i = 0; i <= 1; i += Time.deltaTime)
-            {
-                // set color with i as alpha
-                fade_image.color = new Color(0, 0, 0, i);
-                yield return null;
-            }
-        }
-    }
+
 }

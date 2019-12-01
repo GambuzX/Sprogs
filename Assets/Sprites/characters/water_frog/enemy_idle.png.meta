@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 541991117c17abd4b986f948027dac05
+guid: 2b3471f010559354fa83279da7c96417
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2701818915754415745
-    second: defense_0
+      213: 1617004695979393580
+    second: enemy_idle_0
   - first:
-      213: 4814634074710440713
-    second: defense_1
+      213: -266049441143215253
+    second: enemy_idle_1
   - first:
-      213: 4269632901923139880
-    second: defense_2
+      213: -7847777839274781794
+    second: enemy_idle_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: defense_0
+      name: enemy_idle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 38
-        width: 82
-        height: 90
+        y: 87
+        width: 100
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a915b56430720c4ba548ccd0f9ed3ce
-      internalID: -2701818915754415745
+      spriteID: 55ee3646d8eb72543b7ac825303a0f6f
+      internalID: 1617004695979393580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: defense_1
+      name: enemy_idle_1
       rect:
         serializedVersion: 2
-        x: 82
-        y: 38
-        width: 82
-        height: 90
+        x: 0
+        y: 46
+        width: 100
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0340895c56c744f42870a92088913297
-      internalID: 4814634074710440713
+      spriteID: 288e3a2e96e38234b842790fa092391d
+      internalID: -266049441143215253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: defense_2
+      name: enemy_idle_2
       rect:
         serializedVersion: 2
-        x: 164
-        y: 38
-        width: 82
-        height: 90
+        x: 0
+        y: 5
+        width: 100
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bb462fb1d334d04caf0ad217a56f4ea
-      internalID: 4269632901923139880
+      spriteID: 21cd691aba865174bbd5b36cd7c7a67e
+      internalID: -7847777839274781794
       vertices: []
       indices: 
       edges: []

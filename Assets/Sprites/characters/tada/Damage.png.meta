@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 4c88887ae95b6294098bbd08939f4a98
+guid: 40f9153a34fec2a4e962ed149ba1cce7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7610299776399898351
-    second: inimigo mergulho_0
+      213: -7854629474860912292
+    second: Damage_0
   - first:
-      213: 1833563968411696941
-    second: inimigo mergulho_1
+      213: -6941875414966023432
+    second: Damage_1
   - first:
-      213: -3462292642306353290
-    second: inimigo mergulho_2
+      213: -5657879152074187224
+    second: Damage_2
   - first:
-      213: 6982611039512924500
-    second: inimigo mergulho_3
+      213: 1692577817029316766
+    second: Damage_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: inimigo mergulho_0
+      name: Damage_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 156
-        width: 100
-        height: 100
+        y: 166
+        width: 82
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 662f412d19d5dc04d8dee428e9d6ab9b
-      internalID: 7610299776399898351
+      spriteID: a187cece6cd43c54391fcb28db953954
+      internalID: -7854629474860912292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inimigo mergulho_1
+      name: Damage_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 156
-        width: 100
-        height: 100
+        x: 82
+        y: 166
+        width: 82
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7744addd988522b479787c37c73bab40
-      internalID: 1833563968411696941
+      spriteID: a14372e38fe463e46ba419321db9cc7b
+      internalID: -6941875414966023432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inimigo mergulho_2
+      name: Damage_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 166
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53866e0388aada54393904e6c007a2bf
+      internalID: -5657879152074187224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 56
-        width: 100
-        height: 100
+        y: 76
+        width: 82
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,29 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2a027de865ea8f4fa71eac1a660fbd6
-      internalID: -3462292642306353290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: inimigo mergulho_3
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 56
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73aa3be5318cbad41af657770e5bccca
-      internalID: 6982611039512924500
+      spriteID: f2839ae99a7e00b4a9d1aab67099f408
+      internalID: 1692577817029316766
       vertices: []
       indices: 
       edges: []

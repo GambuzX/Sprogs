@@ -54,14 +54,25 @@ public class Health : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
+        string currFrog = GetComponent<Fighter>().GetType().ToString();
+
         Projectile projectileComp = collider.GetComponent<Projectile>();
         if (projectileComp != null) {
-            if (projectileComp.getOrigin() != GetComponent<Fighter>().GetType().ToString()) {
+            if (projectileComp.getOrigin() != currFrog) {
                 // enemy projectile
                 audioSource.clip = damageSound;
                 audioSource.Play();
                 UpdateHealth(-projectileComp.getDamage());
                 projectileComp.SelfDestruct();
+            }
+        }
+
+        FrogAttack attackComp = collider.GetComponent<FrogAttack>();
+        if(attackComp != null) {
+            if (attackComp.getOrigin() != currFrog) {
+                audioSource.clip = damageSound;
+                audioSource.Play();
+                UpdateHealth(-attackComp.damage);
             }
         }
     }

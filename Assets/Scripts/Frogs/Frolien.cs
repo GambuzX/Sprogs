@@ -25,4 +25,7 @@ public abstract class Frolien : Fighter
     public override string EnterWaterName() {
         return "FrolienEnterWater";
     }
+    public override string LightAttackName() {
+        return "FrolienLightAttack";
+    }
 }

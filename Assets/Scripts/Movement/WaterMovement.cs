@@ -34,7 +34,7 @@ public class WaterMovement : Movement
             grounded = false;
         }
 
-        if (grounded && Input.GetButton(frog.EnterWaterName()))
+        if (grounded && (Input.GetButton(frog.EnterWaterName()) || Input.GetAxis(frog.VerticalAxisName()) == -1))
         {
             frog.toggleComponents(false);
             animator.SetTrigger("Dive");
@@ -63,6 +63,7 @@ public class WaterMovement : Movement
         rb.velocity = Vector2.zero;
         rb.AddForce(Vector2.up*10, ForceMode2D.Impulse);
         Invoke("ResetCollider", 0.5f);
+        grounded = false;
     }
 
     void ResetCollider()

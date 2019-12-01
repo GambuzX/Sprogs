@@ -25,4 +25,7 @@ public abstract class Sprog : Fighter
     public override string EnterWaterName(){
         return "SprogEnterWater";
     }
+    public override string LightAttackName() {
+        return "SprogLightAttack";
+    }
 }
