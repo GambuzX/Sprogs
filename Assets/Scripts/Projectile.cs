@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
-{
+{    
     private float speed = 1f;
     private float damage = 10f;
-    
+
     private string origin;
-    
+
     public void SelfDestruct() {
         Destroy(this.gameObject);
     }
@@ -38,7 +38,8 @@ public class Projectile : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
-        if (!collider.GetComponentInParent<Fighter>())
+        if (!collider.GetComponentInParent<Fighter>()){
             SelfDestruct();
+        }
     }
 }

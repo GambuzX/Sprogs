@@ -8,6 +8,8 @@ public class DashBehaviour : MonoBehaviour
     [SerializeField] private Transform dashEffect;
     [SerializeField] float dashDistance = 300f;
 
+    public AudioSource soundSource;
+
     private float direction = 1;
 
     private bool dashLock;
@@ -40,6 +42,7 @@ public class DashBehaviour : MonoBehaviour
             }
 
             Vector3 beforeDashPosition = transform.position;
+            soundSource.Play();
             rb.AddForce(new Vector2(direction * dashDistance, 0), ForceMode2D.Impulse);
             Transform dashEffectTransform = Instantiate(dashEffect, beforeDashPosition, Quaternion.identity);
             dashEffectTransform.eulerAngles = new Vector3(0, rb.transform.eulerAngles.y, 0);
