@@ -400,9 +400,6 @@ MonoBehaviour:
   vids:
   - {fileID: 32900000, guid: 962ff06a6c74b9a4eb613427a90ee115, type: 3}
   - {fileID: 32900000, guid: 76c9c874610308240af184aea594040a, type: 3}
-  auds:
-  - {fileID: 8300000, guid: 5a56a2fd2d6e575429038532cc24b2a9, type: 3}
-  - {fileID: 8300000, guid: a62ce95a14cd4dc48bb06c68e174ef5b, type: 3}
   videoPlayer: {fileID: 2102191181}
   audioSource: {fileID: 1008702858}
 --- !u!1 &1336484036

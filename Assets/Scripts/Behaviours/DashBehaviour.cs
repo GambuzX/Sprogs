@@ -7,7 +7,7 @@ using UnityEngine;
 public class DashBehaviour : MonoBehaviour
 {
     [SerializeField] private Transform dashEffect;
-    [SerializeField] float dashDistance = 300f;
+    [SerializeField] float dashDistance = 5f;
 
     public AudioClip dashSound;
 
@@ -49,7 +49,8 @@ public class DashBehaviour : MonoBehaviour
             audioSource.clip = dashSound;
             audioSource.Play();
 
-            rb.AddForce(new Vector2(direction * dashDistance, 0), ForceMode2D.Impulse);
+            float maxDashDistance = GetMaxDashDistance(beforeDashPosition);
+            frog.transform.Translate(new Vector2(maxDashDistance, 0));
             Transform dashEffectTransform = Instantiate(dashEffect, beforeDashPosition, Quaternion.identity);
             dashEffectTransform.eulerAngles = new Vector3(0, rb.transform.eulerAngles.y, 0);
 
@@ -62,5 +63,31 @@ public class DashBehaviour : MonoBehaviour
     public void UnlockDash()
     {
         dashLock = false;
+    }
+
+    private float GetMaxDashDistance(Vector3 beforeDashPosition)
+    {
+        float maxDashDistance = dashDistance;
+
+        if(direction == 1)
+        {
+            Vector3 startPosition = new Vector3(beforeDashPosition.x+1f, beforeDashPosition.y, 0);
+            RaycastHit2D hit = Physics2D.Raycast(startPosition, new Vector2(1, 0), dashDistance);
+            if(hit.collider != null)
+            {
+                maxDashDistance = hit.distance;
+            }
+        }
+        else if(direction == -1)
+        {
+            Vector3 startPosition = new Vector3(beforeDashPosition.x-1f, beforeDashPosition.y, 0);
+            RaycastHit2D hit = Physics2D.Raycast(startPosition, new Vector2(-1, 0), dashDistance);
+            if (hit.collider != null)
+            {
+                maxDashDistance = hit.distance;
+            }
+        }
+        
+        return maxDashDistance;
     }
 }

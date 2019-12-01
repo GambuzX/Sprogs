@@ -10,7 +10,6 @@ public class CutsceneLoader : MonoBehaviour
 
 public RawImage rawImage;
 public VideoClip[] vids;
-public AudioClip[] auds;
 public VideoPlayer videoPlayer;
 public AudioSource audioSource;
 
@@ -25,12 +24,11 @@ void Start () {
 
     count++;
 
-    Invoke("ChangeClip",5f);
+    Invoke("ChangeClip",15f);
 }
 
 void ChangeClip(){
     videoPlayer.clip = vids[count];
-    audioSource.clip = auds[count];
     StartCoroutine(PlayVideo(videoPlayer));
 }
 

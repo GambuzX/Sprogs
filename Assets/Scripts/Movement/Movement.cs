@@ -34,10 +34,12 @@ public abstract class Movement : MonoBehaviour
     public void lockMovement() {
         rb.velocity = Vector2.zero;
         movementLocked = true;
+        this.enabled = false;
     }
 
     public void unlockMovement() {
         movementLocked = false;
+        this.enabled = true;
     }
 
     protected void fullLockMovement() {
