@@ -6,6 +6,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Fighter))]
 public class Health : MonoBehaviour
 {
+
+    public AudioSource soundSource;
     private const float MAX_HEALTH = 100f;
     private float health;
 
@@ -47,6 +49,7 @@ public class Health : MonoBehaviour
         if (projectileComp != null) {
             if (projectileComp.getOrigin() != GetComponent<Fighter>().GetType().ToString()) {
                 // enemy projectile
+                soundSource.Play();
                 UpdateHealth(-projectileComp.getDamage());
                 projectileComp.SelfDestruct();
             }
