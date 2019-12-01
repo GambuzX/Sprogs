@@ -24,24 +24,26 @@ void Start () {
     rawImage.enabled = false;
     audioSource.Play();
 
-
     ChangeClip();
-
-    count++;
 
     Invoke("ChangeClip",10f);
 
-    Invoke("LoadSelectedScene",20f);
+    Invoke("ChangeClip",15f);
+
+    Invoke("LoadSelectedScene",25f);
 
 }
 
 void ChangeClip(){
+    Debug.Log("ausd");
     videoPlayer.clip = vids[count];
     if(count>0){
         texts[count-1].GetComponent<Text>().enabled = false;
     }
     texts[count].GetComponent<Text>().enabled = true;
     StartCoroutine(PlayVideo(videoPlayer));
+    count++;
+
 }
 
 IEnumerator PlayVideo(VideoPlayer vp)
