@@ -4,16 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Fighter))]
+[RequireComponent(typeof(AudioSource))]
 public class Health : MonoBehaviour
 {
 
-    public AudioSource soundSource;
+    public AudioClip damageSound;
     private const float MAX_HEALTH = 100f;
     private float health;
 
     private Fighter frog;
     private Image healthBar;
     private LevelController levelController;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class Health : MonoBehaviour
         health = 100f;
         UpdateHealthBar();
         levelController = GameObject.FindObjectOfType<LevelController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public float GetHealth()
@@ -55,7 +58,8 @@ public class Health : MonoBehaviour
         if (projectileComp != null) {
             if (projectileComp.getOrigin() != GetComponent<Fighter>().GetType().ToString()) {
                 // enemy projectile
-                soundSource.Play();
+                audioSource.clip = damageSound;
+                audioSource.Play();
                 UpdateHealth(-projectileComp.getDamage());
                 projectileComp.SelfDestruct();
             }

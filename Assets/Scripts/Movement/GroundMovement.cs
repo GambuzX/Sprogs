@@ -11,7 +11,7 @@ public class GroundMovement : Movement
     new void Start() {
         base.Start();
     }
-    
+
     void FixedUpdate() {
         if(movementLocked) return;
 
@@ -41,6 +41,7 @@ public class GroundMovement : Movement
                 break;
 
             case "Water":
+                fullLockMovement();
                 levelController.GameOver(this.gameObject.GetComponent<Fighter>());
                 break;
         }

@@ -36,4 +36,9 @@ public abstract class Movement : MonoBehaviour
     public void unlockMovement() {
         movementLocked = false;
     }
+
+    protected void fullLockMovement() {
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = 0;
+    }
 }

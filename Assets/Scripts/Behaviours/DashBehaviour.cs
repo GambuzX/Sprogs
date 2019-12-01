@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Fighter))]
+[RequireComponent(typeof(AudioSource))]
 public class DashBehaviour : MonoBehaviour
 {
     [SerializeField] private Transform dashEffect;
     [SerializeField] float dashDistance = 300f;
 
-    public AudioSource soundSource;
+    public AudioClip dashSound;
 
     private float direction = 1;
 
@@ -16,6 +17,7 @@ public class DashBehaviour : MonoBehaviour
     private Fighter frog;
 
     private Rigidbody2D rb;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class DashBehaviour : MonoBehaviour
         frog = GetComponent<Fighter>();
 
         rb = frog.gameObject.GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,7 +45,10 @@ public class DashBehaviour : MonoBehaviour
             }
 
             Vector3 beforeDashPosition = transform.position;
-            soundSource.Play();
+
+            audioSource.clip = dashSound;
+            audioSource.Play();
+
             rb.AddForce(new Vector2(direction * dashDistance, 0), ForceMode2D.Impulse);
             Transform dashEffectTransform = Instantiate(dashEffect, beforeDashPosition, Quaternion.identity);
             dashEffectTransform.eulerAngles = new Vector3(0, rb.transform.eulerAngles.y, 0);

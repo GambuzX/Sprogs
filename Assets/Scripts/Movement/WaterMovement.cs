@@ -43,6 +43,7 @@ public class WaterMovement : Movement
     void OnCollisionEnter2D(Collision2D collision) {
         switch(collision.transform.tag) {
             case "Ground":
+                fullLockMovement();
                 levelController.GameOver(this.gameObject.GetComponent<Fighter>());
                 break;
 
