@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334773086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -0.35, z: -0.7}
+  m_LocalPosition: {x: 0.15, y: -0.035, z: -0.75}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2380281401682399647}
@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 2380281401682399584}
   - component: {fileID: 178917757}
   - component: {fileID: 486326493}
+  - component: {fileID: 884532999}
   m_Layer: 9
   m_Name: WaterFrog
   m_TagString: Frolien
@@ -428,3 +429,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &884532999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2380281401682399646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c81298eda07704c855fae1f0e861b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
