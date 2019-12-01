@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WaterMovement : Movement
 {
+
+    private Animator animator;
+
     public GameObject jumpSpot;
 
     // Start is called before the first frame update
@@ -11,10 +14,12 @@ public class WaterMovement : Movement
     {
         base.Start();
         jumpSpot = GameObject.FindGameObjectWithTag("JumpSpot");
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate() {
         float moveHorizontal = Input.GetAxis(frog.HorizontalAxisName());
+        animator.SetFloat("HorizontalMove",Mathf.Abs(moveHorizontal)) ;
 
         if (moveHorizontal > 0) {
             lastMoveRight = true;
