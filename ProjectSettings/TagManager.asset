@@ -9,6 +9,7 @@ TagManager:
   - Sprog
   - Frolien
   - JumpSpot
+  - FrogAttack
   layers:
   - Default
   - TransparentFX
