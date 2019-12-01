@@ -73,7 +73,6 @@ public class WaterMovement : MonoBehaviour
     void JumpFromSpot()
     {
         gameObject.transform.position = jumpSpot.transform.position;
-        Debug.Log(gameObject.transform.position);
         rb.velocity = Vector2.zero;
         rb.AddForce(Vector2.up*10, ForceMode2D.Impulse);
         Invoke("ResetCollider", 2f);
