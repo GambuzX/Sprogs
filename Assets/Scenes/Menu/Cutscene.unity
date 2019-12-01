@@ -120,6 +120,83 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &326943768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 326943769}
+  - component: {fileID: 326943771}
+  - component: {fileID: 326943770}
+  m_Layer: 5
+  m_Name: TextCutscene3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &326943769
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326943768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1336484040}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 190.42, y: 77.99}
+  m_SizeDelta: {x: 200.17, y: 171.02}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &326943770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326943768}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.45490196}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 550127b3965cacf4298b5f344b10bd30, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: But someone is not so happy about it
+--- !u!222 &326943771
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326943768}
+  m_CullTransparentMesh: 0
 --- !u!1 &853873466
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,8 +231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190.42, y: 77.99}
-  m_SizeDelta: {x: 200.17, y: 171.02}
+  m_AnchoredPosition: {x: 177.8, y: 40}
+  m_SizeDelta: {x: 225.5, y: 246.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853873468
 MonoBehaviour:
@@ -170,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.45490196}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.56078434}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -188,7 +265,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Space Frogs have been sent to the planet X to collect the "Mighty Apple"
+  m_Text: The Space Frogs have been sent to the planet "Frolandia" to collect the
+    "Mighty Apple"
 --- !u!222 &853873469
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -479,9 +557,11 @@ MonoBehaviour:
   texts:
   - {fileID: 853873468}
   - {fileID: 2066791651}
+  - {fileID: 326943770}
   vids:
   - {fileID: 32900000, guid: 28f73d54272b93649bcb41208c694cdd, type: 3}
   - {fileID: 32900000, guid: f5239b8f172393f4ebcc72fbb6c3b33a, type: 3}
+  - {fileID: 32900000, guid: 01c9362ae44e92c4f81a84cf2248b8a3, type: 3}
 --- !u!1 &1336484036
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +655,7 @@ RectTransform:
   - {fileID: 1304944722}
   - {fileID: 853873467}
   - {fileID: 2066791650}
+  - {fileID: 326943769}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
