@@ -2,33 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Fighter))]
-[RequireComponent(typeof(DashBehaviour))]
-public class WaterMovement : MonoBehaviour
+public class WaterMovement : Movement
 {
-    [SerializeField] float moveSpeed = 200f;
-    [SerializeField] float jumpForce = 10f;
-
     public GameObject jumpSpot;
 
-    private bool grounded;
-
-    private bool lastMoveRight;
-
-    private Rigidbody2D rb;
-    private Fighter frog;
-    private LevelController levelController;
-
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        frog = GetComponent<Fighter>();
-        grounded = true;
-
+        base.Start();
         jumpSpot = GameObject.FindGameObjectWithTag("JumpSpot");
-        levelController = GameObject.FindObjectOfType<LevelController>();
     }
 
     void FixedUpdate() {
@@ -73,7 +55,6 @@ public class WaterMovement : MonoBehaviour
     void JumpFromSpot()
     {
         gameObject.transform.position = jumpSpot.transform.position;
-        Debug.Log(gameObject.transform.position);
         rb.velocity = Vector2.zero;
         rb.AddForce(Vector2.up*10, ForceMode2D.Impulse);
         Invoke("ResetCollider", 2f);

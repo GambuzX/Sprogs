@@ -5,29 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Fighter))]
 
-public class GroundMovement : MonoBehaviour
+public class GroundMovement : Movement
 {
-    [SerializeField] float moveSpeed = 200f;
-    [SerializeField] float jumpForce = 6f;
-    private bool grounded;
 
-    private bool lastMoveRight;
-    private bool movementLocked;
-
-    private Rigidbody2D rb;
-    private Fighter frog;
-    private LevelController levelController;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        frog = GetComponent<Fighter>();
-        grounded = true;
-        movementLocked = false;
-        levelController = GameObject.FindObjectOfType<LevelController>();
+    new void Start() {
+        base.Start();
     }
-
+    
     void FixedUpdate() {
         if(movementLocked) return;
 
@@ -60,14 +44,5 @@ public class GroundMovement : MonoBehaviour
                 levelController.GameOver(this.gameObject.GetComponent<Fighter>());
                 break;
         }
-    }
-
-    public void lockMovement() {
-        rb.velocity = Vector2.zero;
-        movementLocked = true;
-    }
-
-    public void unlockMovement() {
-        movementLocked = false;
     }
 }
