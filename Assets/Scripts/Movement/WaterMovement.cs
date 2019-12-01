@@ -37,6 +37,7 @@ public class WaterMovement : Movement
             grounded = false;
             animator.SetTrigger("Jump");
             animator.ResetTrigger("Dive");
+            animator.ResetTrigger("Shoot");
             animator.SetBool("Grounded", false);
         }
 
@@ -74,6 +75,7 @@ public class WaterMovement : Movement
         Invoke("ResetCollider", 0.5f);
         grounded = false;
         animator.SetBool("Grounded", false);
+        animator.SetTrigger("Jump");
     }
 
     void ResetCollider()
