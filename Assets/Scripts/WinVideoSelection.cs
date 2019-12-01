@@ -32,6 +32,8 @@ public class WinVideoSelection : MonoBehaviour
 
     ChangeClip();
 
+    Invoke("LoadSelectedScene",5f);
+
     }
 
     // Update is called once per frame
@@ -58,5 +60,9 @@ public class WinVideoSelection : MonoBehaviour
         rawImage.texture = vp.texture;
         vp.Play();
         musicSource.Play();
+    }
+
+    public void LoadSelectedScene(){
+        SceneManager.LoadScene("MainMenu");
     }
 }
