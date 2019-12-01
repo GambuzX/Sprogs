@@ -9,9 +9,11 @@ public class CutsceneLoader : MonoBehaviour
 {
 
 public RawImage rawImage;
-public VideoClip[] vids;
 public VideoPlayer videoPlayer;
 public AudioSource audioSource;
+
+public Text[] texts;
+public VideoClip[] vids;
 
 private int count = 0;
 
@@ -25,10 +27,17 @@ void Start () {
     count++;
 
     Invoke("ChangeClip",15f);
+
+    Invoke("LoadSelectedScene",30f);
+
 }
 
 void ChangeClip(){
     videoPlayer.clip = vids[count];
+    if(count>0){
+        texts[count-1].GetComponent<Text>().enabled = false;
+    }
+    texts[count].GetComponent<Text>().enabled = true;
     StartCoroutine(PlayVideo(videoPlayer));
 }
 
@@ -46,6 +55,10 @@ IEnumerator PlayVideo(VideoPlayer vp)
     audioSource.Play();
 }
 
+
+public void LoadSelectedScene(){
+    SceneManager.LoadScene("Game");
+}
 
 
 }
