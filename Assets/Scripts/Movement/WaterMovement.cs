@@ -53,6 +53,7 @@ public class WaterMovement : MonoBehaviour
         if (grounded && Input.GetButton(frog.EnterWaterName()))
         {
             gameObject.GetComponentInChildren<Collider2D>().enabled = false;
+            grounded = false;
             Invoke("JumpFromSpot", 2);
         }
     }
