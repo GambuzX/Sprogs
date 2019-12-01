@@ -6,18 +6,22 @@ using UnityEngine;
 public class ShooterBehaviour : MonoBehaviour
 {
     [SerializeField] float fireRate = 1f;
+    [SerializeField] bool usePhysics = false;
 
     public GameObject projectilePrefab;
     
     private bool shootLock;
 
     private Fighter frog;
+    private Transform ShootingPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         shootLock = false;
         frog = GetComponent<Fighter>();
+        ShootingPosition = transform.Find("ShootingPosition").transform;
+
     }
 
     // Update is called once per frame
@@ -35,12 +39,15 @@ public class ShooterBehaviour : MonoBehaviour
         bool lastMoveRight = transform.eulerAngles.y == 0;
         Vector2 direction = lastMoveRight ? Vector2.right : Vector2.left;
 
-        GameObject projectile = Instantiate(projectilePrefab, this.transform.position, projectilePrefab.transform.rotation);
+        GameObject projectile = Instantiate(projectilePrefab, ShootingPosition.position, projectilePrefab.transform.rotation);
         Projectile projectileComp = projectile.GetComponent<Projectile>();
         projectileComp.setSpeed(8f);
         projectileComp.setOrientation(lastMoveRight);
         projectileComp.setOrigin(frog.GetType().ToString());
-        projectileComp.applyForce();
+
+        if(usePhysics) projectileComp.applyForce();
+        else projectileComp.applyVelocity();
+
         Invoke("UnlockShoot", fireRate);
     }
 
