@@ -16,23 +16,28 @@ public class WinVideoSelection : MonoBehaviour
     private string winner;
     private int winnerSelected;
 
+    private Text winText;
 
     // Start is called before the first frame update
     void Start()
     {
-    winner = PlayerPrefs.GetString("winner");
-    if(winner == "frolien"){
-        winnerSelected = 1;
-    }else{
-        winnerSelected = 0;
-    }
-    videoPlayer.isLooping = true;
-    rawImage.enabled = false;
-    audioSource.Play();
+        winText = GameObject.Find("WinText").GetComponent<Text>();
 
-    ChangeClip();
+        winner = PlayerPrefs.GetString("winner");
+        if(winner == "frolien"){
+            winnerSelected = 1;
+            winText.text = "FROLIENS WIN";
+        }else{
+            winnerSelected = 0;
+            winText.text = "SPROGS WIN";
+        }
+        videoPlayer.isLooping = true;
+        rawImage.enabled = false;
+        audioSource.Play();
 
-    Invoke("LoadSelectedScene",5f);
+        ChangeClip();
+
+        Invoke("LoadSelectedScene",5f);
 
     }
 
