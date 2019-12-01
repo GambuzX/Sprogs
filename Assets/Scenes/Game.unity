@@ -155,7 +155,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &124543878
 MonoBehaviour:
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 1bb2ca8f7f86da245b1b383b8b09480f, type: 2}
+  m_Texture: {fileID: 8400000, guid: 1e88bf24fe52de849a4ecef7707081a9, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -216,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334773086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -0.35, z: -0.7}
+  m_LocalPosition: {x: 0.15, y: -0.03, z: -0.7}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1065083803}
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 1e88bf24fe52de849a4ecef7707081a9, type: 2}
+  m_Texture: {fileID: 8400000, guid: 1bb2ca8f7f86da245b1b383b8b09480f, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -684,11 +684,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2380281400479729703, guid: 529ac5db961a60948b52c9590590340f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 2380281400479729701, guid: 529ac5db961a60948b52c9590590340f,
         type: 3}
       propertyPath: m_Offset.y
@@ -718,6 +713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380281400479729703, guid: 529ac5db961a60948b52c9590590340f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2380281400479729706, guid: 529ac5db961a60948b52c9590590340f,
         type: 3}
@@ -1002,6 +1002,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3899915882634214633, guid: e1638ce00bde41245974fb4aa018c2f8,
+        type: 3}
+      propertyPath: m_Name
+      value: SprogHealthBar
+      objectReference: {fileID: 0}
     - target: {fileID: 3899915883532050288, guid: e1638ce00bde41245974fb4aa018c2f8,
         type: 3}
       propertyPath: m_EffectColor.a
@@ -1051,6 +1056,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899915883676669833, guid: e1638ce00bde41245974fb4aa018c2f8,
+        type: 3}
+      propertyPath: m_Name
+      value: FrolienHealthBar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1638ce00bde41245974fb4aa018c2f8, type: 3}
