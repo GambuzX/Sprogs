@@ -38,9 +38,9 @@ public class ShooterBehaviour : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, this.transform.position, projectilePrefab.transform.rotation);
         Projectile projectileComp = projectile.GetComponent<Projectile>();
         projectileComp.setSpeed(8f);
-        projectileComp.setDirection(direction);
         projectileComp.setOrientation(lastMoveRight);
         projectileComp.setOrigin(frog.GetType().ToString());
+        projectileComp.applyForce();
         Invoke("UnlockShoot", fireRate);
     }
 

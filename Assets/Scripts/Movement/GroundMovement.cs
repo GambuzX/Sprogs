@@ -7,7 +7,6 @@ using UnityEngine;
 
 public class GroundMovement : Movement
 {
-
     new void Start() {
         base.Start();
     }
@@ -16,6 +15,7 @@ public class GroundMovement : Movement
         if(movementLocked) return;
 
         float moveHorizontal = Input.GetAxis(frog.HorizontalAxisName());
+        animator.SetFloat("HorizontalMove", Mathf.Abs(moveHorizontal));
 
         if (moveHorizontal > 0) {
             lastMoveRight = true;

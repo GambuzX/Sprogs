@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaterMovement : Movement
 {
+
     public GameObject jumpSpot;
 
     // Start is called before the first frame update
@@ -15,6 +16,7 @@ public class WaterMovement : Movement
 
     void FixedUpdate() {
         float moveHorizontal = Input.GetAxis(frog.HorizontalAxisName());
+        animator.SetFloat("HorizontalMove",Mathf.Abs(moveHorizontal)) ;
 
         if (moveHorizontal > 0) {
             lastMoveRight = true;
@@ -34,9 +36,10 @@ public class WaterMovement : Movement
 
         if (grounded && Input.GetButton(frog.EnterWaterName()))
         {
-            gameObject.GetComponentInChildren<Collider2D>().enabled = false;
+            frog.toggleComponents(false);
+            animator.SetTrigger("Dive");
             grounded = false;
-            Invoke("JumpFromSpot", 2);
+            Invoke("JumpFromSpot", 2f);
         }
     }
 
@@ -56,13 +59,15 @@ public class WaterMovement : Movement
     void JumpFromSpot()
     {
         gameObject.transform.position = jumpSpot.transform.position;
+        animator.SetTrigger("Resurface");
         rb.velocity = Vector2.zero;
         rb.AddForce(Vector2.up*10, ForceMode2D.Impulse);
-        Invoke("ResetCollider", 2f);
+        Invoke("ResetCollider", 0.5f);
     }
 
     void ResetCollider()
     {
         gameObject.GetComponentInChildren<Collider2D>().enabled = true;
+        frog.toggleComponents(true);
     }
 }

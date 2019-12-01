@@ -12,5 +12,5 @@ abstract public class Fighter : MonoBehaviour
     public abstract string DashButtonName();
     public abstract string HealthBarName();
     public abstract string EnterWaterName();
-    public abstract void disableComponents();
+    public abstract void toggleComponents(bool enabled);
 }

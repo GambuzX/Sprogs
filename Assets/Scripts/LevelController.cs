@@ -30,8 +30,8 @@ public class LevelController : MonoBehaviour
         string winner = (loser is Sprog ? "frolien" : "sprog");
         PlayerPrefs.SetString("winner", winner);
 
-        sprog.disableComponents();
-        frolian.disableComponents();
+        sprog.toggleComponents(false);
+        frolian.toggleComponents(false);
 
         winAnimation.Play();
         gameover = true;

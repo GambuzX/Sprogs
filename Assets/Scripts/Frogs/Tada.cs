@@ -19,9 +19,9 @@ public class Tada : Sprog
         }
     }
 
-    public override void disableComponents() {
-        GetComponent<GroundMovement>().enabled = false;
-        GetComponent<ShooterBehaviour>().enabled = false;
-        this.enabled = false;
+    public override void toggleComponents(bool enabled) {
+        GetComponent<GroundMovement>().enabled = enabled;
+        GetComponent<ShooterBehaviour>().enabled = enabled;
+        this.enabled = enabled;
     }
 }
