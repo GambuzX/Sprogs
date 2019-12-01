@@ -214,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashEffect: {fileID: 40330922135080820, guid: 7c95aa2d3fe886a429974190a00f19c7,
     type: 3}
-  dashDistance: 300
+  dashDistance: 5
   dashSound: {fileID: 8300000, guid: 5a56a2fd2d6e575429038532cc24b2a9, type: 3}
 --- !u!95 &2380281401682399584
 Animator:
