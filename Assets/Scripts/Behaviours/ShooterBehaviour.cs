@@ -14,6 +14,7 @@ public class ShooterBehaviour : MonoBehaviour
 
     private Fighter frog;
     private Transform ShootingPosition;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +22,14 @@ public class ShooterBehaviour : MonoBehaviour
         shootLock = false;
         frog = GetComponent<Fighter>();
         ShootingPosition = transform.Find("ShootingPosition").transform;
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!shootLock && Input.GetButton(frog.FireButtonName())) {
+            animator.SetTrigger("Shoot");
             SpawnProjectile();
         }            
     }
