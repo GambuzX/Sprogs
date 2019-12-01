@@ -7,4 +7,10 @@ using UnityEngine;
 [RequireComponent(typeof(DashBehaviour))]
 public class WaterFrog : Frolien
 {
+    public override void disableComponents() {
+        GetComponent<WaterMovement>().enabled = false;
+        GetComponent<ShooterBehaviour>().enabled = false;
+        GetComponent<DashBehaviour>().enabled = false;
+        this.enabled = false;
+    }
 }

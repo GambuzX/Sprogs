@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
 
     private Fighter frog;
     private Image healthBar;
+    private LevelController levelController;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class Health : MonoBehaviour
         healthBar = GameObject.Find(frog.HealthBarName()).transform.Find("HealthBar").GetComponent<Image>();
         health = 100f;
         UpdateHealthBar();
+        levelController = GameObject.FindObjectOfType<LevelController>();
     }
 
     public float GetHealth()
@@ -37,7 +39,7 @@ public class Health : MonoBehaviour
         UpdateHealthBar();
 
         if (health <= 0f) {
-            LevelController.GameOver(this.gameObject.GetComponent<Fighter>());
+            levelController.GameOver(this.gameObject.GetComponent<Fighter>());
         }
     }
 

@@ -18,6 +18,7 @@ public class WaterMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Fighter frog;
+    private LevelController levelController;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class WaterMovement : MonoBehaviour
         grounded = true;
 
         jumpSpot = GameObject.FindGameObjectWithTag("JumpSpot");
+        levelController = GameObject.FindObjectOfType<LevelController>();
     }
 
     void FixedUpdate() {
@@ -58,7 +60,7 @@ public class WaterMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) {
         switch(collision.transform.tag) {
             case "Ground":
-                LevelController.GameOver(this.gameObject.GetComponent<Fighter>());
+                levelController.GameOver(this.gameObject.GetComponent<Fighter>());
                 break;
 
             case "Water":

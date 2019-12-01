@@ -15,6 +15,7 @@ public class GroundMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Fighter frog;
+    private LevelController levelController;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class GroundMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         frog = GetComponent<Fighter>();
         grounded = true;
+        levelController = GameObject.FindObjectOfType<LevelController>();
     }
 
     void FixedUpdate() {
@@ -51,7 +53,7 @@ public class GroundMovement : MonoBehaviour
                 break;
 
             case "Water":
-                LevelController.GameOver(this.gameObject.GetComponent<Fighter>());
+                levelController.GameOver(this.gameObject.GetComponent<Fighter>());
                 break;
         }
     }
