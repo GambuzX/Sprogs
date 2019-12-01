@@ -219,8 +219,8 @@ Transform:
   m_LocalPosition: {x: 0.15, y: -0.03, z: -0.7}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 1065083803}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &334773088
 AudioListener:
@@ -337,7 +337,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &418479300
 PrefabInstance:
@@ -389,7 +389,7 @@ PrefabInstance:
     - target: {fileID: 186152932208075950, guid: f37e462db0c38a1449185f406c6a80a5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 186152932208075950, guid: f37e462db0c38a1449185f406c6a80a5,
         type: 3}
@@ -580,6 +580,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 334773087, guid: 529ac5db961a60948b52c9590590340f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.035
+      objectReference: {fileID: 0}
+    - target: {fileID: 334773087, guid: 529ac5db961a60948b52c9590590340f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 334773087, guid: 529ac5db961a60948b52c9590590340f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 2380281400479729701, guid: 529ac5db961a60948b52c9590590340f,
         type: 3}
       propertyPath: m_Offset.y
@@ -619,11 +631,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1617004695979393580, guid: 2b3471f010559354fa83279da7c96417,
+        type: 3}
     - target: {fileID: 2380281400479729706, guid: 529ac5db961a60948b52c9590590340f,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2380281400479729706, guid: 529ac5db961a60948b52c9590590340f,
         type: 3}
@@ -826,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 3899915882375179092, guid: e1638ce00bde41245974fb4aa018c2f8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3899915882375179092, guid: e1638ce00bde41245974fb4aa018c2f8,
         type: 3}
@@ -947,6 +960,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899915883604297963, guid: e1638ce00bde41245974fb4aa018c2f8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -210
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899915883604297963, guid: e1638ce00bde41245974fb4aa018c2f8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -137
       objectReference: {fileID: 0}
     - target: {fileID: 3899915883676669833, guid: e1638ce00bde41245974fb4aa018c2f8,
         type: 3}
