@@ -12,6 +12,7 @@ public class GroundMovement : MonoBehaviour
     private bool grounded;
 
     private bool lastMoveRight;
+    private bool movementLocked;
 
     private Rigidbody2D rb;
     private Fighter frog;
@@ -23,10 +24,13 @@ public class GroundMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         frog = GetComponent<Fighter>();
         grounded = true;
+        movementLocked = false;
         levelController = GameObject.FindObjectOfType<LevelController>();
     }
 
     void FixedUpdate() {
+        if(movementLocked) return;
+
         float moveHorizontal = Input.GetAxis(frog.HorizontalAxisName());
 
         if (moveHorizontal > 0) {
@@ -56,5 +60,14 @@ public class GroundMovement : MonoBehaviour
                 levelController.GameOver(this.gameObject.GetComponent<Fighter>());
                 break;
         }
+    }
+
+    public void lockMovement() {
+        rb.velocity = Vector2.zero;
+        movementLocked = true;
+    }
+
+    public void unlockMovement() {
+        movementLocked = false;
     }
 }
