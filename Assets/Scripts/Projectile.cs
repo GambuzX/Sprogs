@@ -11,17 +11,23 @@ public class Projectile : MonoBehaviour
     private string origin = "";
     private bool moveRight = true;
 
+    private Rigidbody2D rb;
+    private void Awake() {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     public void SelfDestruct() {
         Destroy(this.gameObject);
     }
 
-    public void setDirection(Vector2 direction) {
-        GetComponent<Rigidbody2D>().velocity = direction * speed;
+    public void applyVelocity() {
+        rb.gravityScale = 0;
+        rb.velocity = (moveRight ? Vector2.right : Vector2.left) * speed;
     }
 
     public void applyForce() {
         Vector2 direction = (Vector2.up + (moveRight ? Vector2.right : Vector2.left)).normalized;
-        this.GetComponent<Rigidbody2D>().AddForce(direction * speed, ForceMode2D.Impulse);
+        rb.AddForce(direction * speed, ForceMode2D.Impulse);
     }
 
     public void setSpeed(float speed) {

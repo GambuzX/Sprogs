@@ -108,7 +108,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1808824725}
   - component: {fileID: 1808824727}
-  - component: {fileID: 1808824726}
   m_Layer: 8
   m_Name: Camera
   m_TagString: Untagged
@@ -173,14 +172,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &1808824726
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808824724}
-  m_Enabled: 1
 --- !u!1 &1847493188
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +259,7 @@ GameObject:
   - component: {fileID: 673317390}
   - component: {fileID: 471064236}
   - component: {fileID: 965522007}
-  - component: {fileID: 411579979}
+  - component: {fileID: 1613404771780989057}
   m_Layer: 8
   m_Name: Tada
   m_TagString: Sprog
@@ -290,6 +281,7 @@ Transform:
   - {fileID: 1420786580}
   - {fileID: 1808824725}
   - {fileID: 1847493189}
+  - {fileID: 2484930220765358230}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -353,6 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 1
+  usePhysics: 0
   projectilePrefab: {fileID: 7051407308986761649, guid: a1407fa1a1711e9489fef5c654510560,
     type: 3}
 --- !u!95 &673317390
@@ -483,7 +476,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &411579979
+--- !u!114 &1613404771780989057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -495,3 +488,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c81298eda07704c855fae1f0e861b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &636874946104940972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2484930220765358230}
+  m_Layer: 8
+  m_Name: ShootingPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2484930220765358230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636874946104940972}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.41, y: 0.096, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 186152932208075950}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
