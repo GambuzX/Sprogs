@@ -316,7 +316,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick 2 button 7
     altNegativeButton: 
-    altPositiveButton: p
+    altPositiveButton: '[-]'
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -333,6 +333,22 @@ InputManager:
     positiveButton: joystick 1 button 7
     altNegativeButton: 
     altPositiveButton: m
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: SprogPunch
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick 1 button 5
+    altNegativeButton: 
+    altPositiveButton: n
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
