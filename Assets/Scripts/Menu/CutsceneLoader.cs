@@ -29,9 +29,9 @@ void Start () {
 
     count++;
 
-    Invoke("ChangeClip",15f);
+    Invoke("ChangeClip",10f);
 
-    Invoke("LoadSelectedScene",30f);
+    Invoke("LoadSelectedScene",20f);
 
 }
 
