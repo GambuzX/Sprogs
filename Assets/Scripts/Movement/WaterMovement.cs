@@ -5,8 +5,6 @@ using UnityEngine;
 public class WaterMovement : Movement
 {
 
-    private Animator animator;
-
     public GameObject jumpSpot;
 
     // Start is called before the first frame update
@@ -14,7 +12,6 @@ public class WaterMovement : Movement
     {
         base.Start();
         jumpSpot = GameObject.FindGameObjectWithTag("JumpSpot");
-        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate() {
@@ -39,9 +36,9 @@ public class WaterMovement : Movement
 
         if (grounded && Input.GetButton(frog.EnterWaterName()))
         {
-            gameObject.GetComponentInChildren<Collider2D>().enabled = false;
+            animator.SetTrigger("Dive");
             grounded = false;
-            Invoke("JumpFromSpot", 2);
+            Invoke("JumpFromSpot", 2f);
         }
     }
 
@@ -61,9 +58,10 @@ public class WaterMovement : Movement
     void JumpFromSpot()
     {
         gameObject.transform.position = jumpSpot.transform.position;
+        animator.SetTrigger("Resurface");
         rb.velocity = Vector2.zero;
         rb.AddForce(Vector2.up*10, ForceMode2D.Impulse);
-        Invoke("ResetCollider", 2f);
+        Invoke("ResetCollider", 1f);
     }
 
     void ResetCollider()
