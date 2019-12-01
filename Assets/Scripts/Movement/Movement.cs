@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Fighter))]
+[RequireComponent(typeof(Animator))]
 
 public abstract class Movement : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public abstract class Movement : MonoBehaviour
     protected Rigidbody2D rb;
     protected Fighter frog;
     protected LevelController levelController;
+    protected Animator animator;
 
     // Start is called before the first frame update
     protected void Start()
@@ -26,6 +28,7 @@ public abstract class Movement : MonoBehaviour
         grounded = true;
         movementLocked = false;
         levelController = GameObject.FindObjectOfType<LevelController>();
+        animator = GetComponent<Animator>();
     }
 
     public void lockMovement() {
