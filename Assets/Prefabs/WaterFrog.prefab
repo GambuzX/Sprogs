@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1
   usePhysics: 1
-  projectilePrefab: {fileID: 7051407308986761649, guid: a1407fa1a1711e9489fef5c654510560,
+  projectilePrefab: {fileID: 7051407308986761649, guid: de61e04a27c5f854a8ed6842ea941cd9,
     type: 3}
 --- !u!114 &2380281401682399644
 MonoBehaviour:
