@@ -35,7 +35,6 @@ void Start () {
 }
 
 void ChangeClip(){
-    Debug.Log("ausd");
     videoPlayer.clip = vids[count];
     if(count>0){
         texts[count-1].GetComponent<Text>().enabled = false;
