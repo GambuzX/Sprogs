@@ -484,8 +484,8 @@ MonoBehaviour:
   - {fileID: 853873468}
   - {fileID: 1406671426}
   vids:
+  - {fileID: 32900000, guid: 972b0cd58d8e20f48b97bfb7c42b0c14, type: 3}
   - {fileID: 32900000, guid: 962ff06a6c74b9a4eb613427a90ee115, type: 3}
-  - {fileID: 32900000, guid: 76c9c874610308240af184aea594040a, type: 3}
 --- !u!1 &1336484036
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +700,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -20,7 +20,10 @@ private int count = 0;
   // Use this for initialization
 void Start () {
 
-    DontDestroyOnLoad(audioSource);
+    videoPlayer.isLooping = true;
+    rawImage.enabled = false;
+    audioSource.Play();
+
 
     ChangeClip();
 
@@ -50,9 +53,9 @@ IEnumerator PlayVideo(VideoPlayer vp)
         yield return waitForSeconds;
         break;
     }
+    rawImage.enabled = true;
     rawImage.texture = vp.texture;
     vp.Play();
-    audioSource.Play();
 }
 
 
