@@ -22,4 +22,7 @@ public abstract class Frolien : Fighter
     public override string HealthBarName() {
         return "FrolienHealthBar";
     }
+    public override string EnterWaterName() {
+        return "FrolienEnterWater";
+    }
 }

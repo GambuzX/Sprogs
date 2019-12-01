@@ -11,4 +11,5 @@ abstract public class Fighter : MonoBehaviour
     public abstract string FireButtonName();
     public abstract string DashButtonName();
     public abstract string HealthBarName();
+    public abstract string EnterWaterName();
 }

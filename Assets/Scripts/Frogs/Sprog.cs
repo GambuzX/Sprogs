@@ -22,4 +22,7 @@ public abstract class Sprog : Fighter
     public override string HealthBarName() {
         return "SprogHealthBar";
     }
+    public override string EnterWaterName(){
+        return "SprogEnterWater";
+    }
 }

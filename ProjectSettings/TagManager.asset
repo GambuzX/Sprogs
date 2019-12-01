@@ -8,6 +8,7 @@ TagManager:
   - Water
   - Sprog
   - Frolien
+  - JumpSpot
   layers:
   - Default
   - TransparentFX
