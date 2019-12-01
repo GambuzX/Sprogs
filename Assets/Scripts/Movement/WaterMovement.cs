@@ -36,6 +36,7 @@ public class WaterMovement : Movement
 
         if (grounded && Input.GetButton(frog.EnterWaterName()))
         {
+            frog.toggleComponents(false);
             animator.SetTrigger("Dive");
             grounded = false;
             Invoke("JumpFromSpot", 2f);
@@ -61,11 +62,12 @@ public class WaterMovement : Movement
         animator.SetTrigger("Resurface");
         rb.velocity = Vector2.zero;
         rb.AddForce(Vector2.up*10, ForceMode2D.Impulse);
-        Invoke("ResetCollider", 1f);
+        Invoke("ResetCollider", 0.5f);
     }
 
     void ResetCollider()
     {
         gameObject.GetComponentInChildren<Collider2D>().enabled = true;
+        frog.toggleComponents(true);
     }
 }
