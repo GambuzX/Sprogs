@@ -63,6 +63,7 @@ public class WaterMovement : Movement
         rb.velocity = Vector2.zero;
         rb.AddForce(Vector2.up*10, ForceMode2D.Impulse);
         Invoke("ResetCollider", 0.5f);
+        grounded = false;
     }
 
     void ResetCollider()

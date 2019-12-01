@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 469d01e710c98924aa47eacd99be5c1a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4353713416311850014
+    second: JumpingTada_0
+  - first:
+      213: -6305344230709925060
+    second: JumpingTada_1
+  - first:
+      213: 404510603652475318
+    second: JumpingTada_2
+  - first:
+      213: -3154701280121971342
+    second: JumpingTada_3
+  - first:
+      213: 6556474406037914489
+    second: JumpingTada_4
+  - first:
+      213: 6162740042993298063
+    second: JumpingTada_5
+  - first:
+      213: 657877451470656867
+    second: JumpingTada_6
+  - first:
+      213: 4270757745647863289
+    second: JumpingTada_7
+  - first:
+      213: -1568665792281579592
+    second: JumpingTada_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +67,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +97,222 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: JumpingTada_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 166
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733179f3ccedb684aa52c0d33f0d52c0
+      internalID: 4353713416311850014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpingTada_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 166
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c141b44f2819f874186e2f93dfc4b3f0
+      internalID: -6305344230709925060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpingTada_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 166
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9201306b316f5084bb93800288493ae3
+      internalID: 404510603652475318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpingTada_3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 166
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3513582592e0d744298895c3f4fcc100
+      internalID: -3154701280121971342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpingTada_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 166
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400e83d24e0f4de429a5cded4b27e8e4
+      internalID: 6556474406037914489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpingTada_5
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 166
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf633b46c04ed344a6ff87ba3e1c1a8
+      internalID: 6162740042993298063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpingTada_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae660a020f1d6c41af8ab18ed348692
+      internalID: 657877451470656867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpingTada_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 76
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04536403ab20bc848b2d34bc2b431c71
+      internalID: 4270757745647863289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpingTada_8
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 76
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3bc687fc1e9e042b6fd5593fb1c8c5
+      internalID: -1568665792281579592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
