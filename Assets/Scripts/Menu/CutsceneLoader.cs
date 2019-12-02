@@ -45,7 +45,15 @@ void ChangeClip(){
 
 }
 
-IEnumerator PlayVideo(VideoPlayer vp)
+    private void Update()
+    {
+        if (Input.GetButton("JumpCutscene"))
+        {
+            SceneManager.LoadScene("Game");
+        }
+    }
+
+    IEnumerator PlayVideo(VideoPlayer vp)
 {
     vp.Prepare();
     WaitForSeconds waitForSeconds = new WaitForSeconds(1);
